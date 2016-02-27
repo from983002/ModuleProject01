@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SystemAlign.CInspection_Lamination" Collapsed="true">
+    <Position X="0.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>XyFmICTkEBuQw5grajbS4R8jXyBYBYqg5yvggUkLDCM=</HashCode>
+      <FileName>CInspection_Lamination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.CMIAMExcelControl" Collapsed="true">
+    <Position X="3" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAIAQAAAAA=</HashCode>
+      <FileName>CMIAMExcelControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.CWKBIOControl" Collapsed="true">
+    <Position X="0.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAECAAAAABAAQgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CMIOControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_CPKData" Collapsed="true">
+    <Position X="3" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAACACBA=</HashCode>
+      <FileName>Control_CPKData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_Excel" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABEAAAAwAEBAHAAAACAIAhgCQACSAACAAgCAA=</HashCode>
+      <FileName>Control_Excel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.IsAccess" Collapsed="true">
+    <Position X="8" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Control_Files.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_Files" Collapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAAQUBEAAAAAAgAAJAAAIAAIBKAAAgIAEAACAIAAAg=</HashCode>
+      <FileName>Control_Files.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.ImageUtil" Collapsed="true">
+    <Position X="20.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAQAAAAAAAAABAAAIAAAAAAA=</HashCode>
+      <FileName>Control_Image.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_Inspect_Gap" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>zOd9078bVsf79El//5R8j95eySd45c9nl5wvaxI92Sc=</HashCode>
+      <FileName>Control_Inspect_Gap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_LS1224" Collapsed="true">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAABBAAAQAAoAAQAAAAAAAAA=</HashCode>
+      <FileName>Control_LVS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_PN2212" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAgAAgAAAAAAAAAAABAAAQAAgAAQEEAAABAAA=</HashCode>
+      <FileName>Control_LVS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_Metrox" Collapsed="true">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Control_Metrox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_PLC" Collapsed="true">
+    <Position X="22" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oDAgTACEUM8IJBQxElRJESiUQ0hEAoByGih8gPFAIjs=</HashCode>
+      <FileName>Control_PLC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_UltraChart" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gVAQIAAACAAA0CAAAAoAAEAIAAAAIAAAAAAAAFABAAA=</HashCode>
+      <FileName>Control_UltraChart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.LabelRendererDate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAEAAA=</HashCode>
+      <FileName>Control_UltraChart.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.LabelRendererMonth" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Control_UltraChart.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.Control_UltraGrid" Collapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Control_UltraGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.UltraActivityIndicatorTextDrawFilter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAQAAAgAAgAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Control_UltraGrid.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.Control_UltraMessageBox" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACIAABAAAAAAAAgAMAQAgAEQAEAAAEAAA=</HashCode>
+      <FileName>Control_UltraMessageBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Umac_System" Collapsed="true">
+    <Position X="16.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAgAAAABAAAAgYAEAAAAAAAQAhIBAACABAECCAAKQAA=</HashCode>
+      <FileName>Control_UMAC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_UMAC" Collapsed="true">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAmg5AAAAAJAGGLBQAAAAhAACgMCQABAAJAgCgAAg=</HashCode>
+      <FileName>Control_UMAC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Control_Winsock" Collapsed="true">
+    <Position X="16.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARQAAAgAAFAAEEBAACAACQAIQkAEEoAAhAAQAICAAAI=</HashCode>
+      <FileName>Control_Winsock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.ControlDrawArea" Collapsed="true">
+    <Position X="18.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAJoABAAAQABQLICABoQYAAIAAAAAgQSAgAEAAAABwA=</HashCode>
+      <FileName>ControlDrawArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Process1RearSol" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.Process1ReturnSenserButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.EquipmentFactory" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.EquipmentFactoryFirst" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.EquipmentFactorySecond" Collapsed="true">
+    <Position X="3" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.EquipmentFactoryThird" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.ArmIngredientFactoryFirst" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAQAABAAAAAAAAAAAAAAAAAAAAABI=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.ArmIngredientFactorySecond" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAQAABAAAAAAAAAAAAAAAAAAAAABI=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.ArmIngredientFactoryThird" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAQAABAAAAAAAAAAAAAAAAAAAAABI=</HashCode>
+      <FileName>DPAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.DrawArea" Collapsed="true">
+    <Position X="20.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABAAoHEgCCAQRAABACIADCCABEBCAAICAAAEAJADNA=</HashCode>
+      <FileName>DrawArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.DrawObject" Collapsed="true">
+    <Position X="5.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAiAACAAIBIAwhgEAJCwACAAAgQEAUBAQASgAQAgBo=</HashCode>
+      <FileName>DrawObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.DrawRectangle" Collapsed="true">
+    <Position X="5.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACAGIBAAgggEAACwCCAAAAyAAAAAQAQAAAAABA=</HashCode>
+      <FileName>DrawRectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgCam" Collapsed="true">
+    <Position X="22" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBAQACAAACARAAAQAACAAAAKAAAAAAAABCAAAggAIAA=</HashCode>
+      <FileName>FormDlgCam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgFRcp" Collapsed="true">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HwQAAAAMBCAAAqCM9P//YBACj/9+AACEw/8/GIDDfrI=</HashCode>
+      <FileName>FormDlgFRcp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgInsp" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>///99////7/7///////////f/f///////////v9///8=</HashCode>
+      <FileName>FormDlgInsp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgLogin" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAAAAEIjCACAQwZCCBICGCIAAAFEAkAgYFAAIQCAE=</HashCode>
+      <FileName>FormDlgLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgMain" Collapsed="true">
+    <Position X="13.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>//////////77/////////f/X//////999/////n///8=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgManualAlign" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEASCACAAAKAiSIAACABAAAQAAAgwELEABAAA=</HashCode>
+      <FileName>FormDlgManualAlign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgModelEdit" Collapsed="true">
+    <Position X="16.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBACFAzBAKAAAZASBACmCIAAACAAAAgQUEAAQAAI=</HashCode>
+      <FileName>FormDlgModelEdit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgModelReg" Collapsed="true">
+    <Position X="18.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JiDAFBBBGSADGFRAZBKICEtHEQABuUKIAARMSQFQBCM=</HashCode>
+      <FileName>FormDlgModelReg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.NIAMCamDlg" Collapsed="true">
+    <Position X="15" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wANAAAAABCAAAAAAIlrtBQACAAgAQAiAaAT0ApAOAIA=</HashCode>
+      <FileName>FormDlgMotionHome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgPassEdit" Collapsed="true">
+    <Position X="20.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAABAEAjCACIQwJCCBICGCIAAQFEAAAgYEAgAQCAE=</HashCode>
+      <FileName>FormDlgPassEdit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormDlgUserSelect" Collapsed="true">
+    <Position X="22" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGgEAAEEADAACAAAAACAAACCACAAFSIgAACAQAABCAI=</HashCode>
+      <FileName>FormDlgUserSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormLoader" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IVABElgSRGQYCgCCzJ/sBIBCAX0IMABDgHQSCCCRBDo=</HashCode>
+      <FileName>FormLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormPicker" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Z2EAAFAARGBQCiACzP/+AAALgH8AESB4gv8faADIHro=</HashCode>
+      <FileName>FormPicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormTest" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>N2AAAEAARGBQACCAzf/+AABKgP8AEcB/8v+/aCDIHvo=</HashCode>
+      <FileName>FormTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormTrayInfo" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAABCAAAAAASACAIAACAAAAEAAAAAAAQAAAAAA=</HashCode>
+      <FileName>FormTrayInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.FormUnloader" Collapsed="true">
+    <Position X="15" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YECFQlAIWWRQCiCSXJqEBIBDAyZJkKAFAlAELCBQBBg=</HashCode>
+      <FileName>FormUnloader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.GraphicsList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEAAACAAEjAADBAkwAQoAAAAIEAACABgAABAQCA=</HashCode>
+      <FileName>GraphicsList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.Hough" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABAAAEgCAAEEAAAoAAACAIAAAAAAAoEKAoREAAAAg=</HashCode>
+      <FileName>Hough.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SystemAlign.Interface_LVS" Collapsed="true">
+    <Position X="22" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABFBAAmAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface_LVS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.Melsec" Collapsed="true">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAQAABQAgCAAAgAAAA=</HashCode>
+      <FileName>Melsec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.PositionConvert" Collapsed="true">
+    <Position X="18.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABDQAAAQAAEAAISAiACAACAAQAAAgCIQAAgAIEAAEA=</HashCode>
+      <FileName>PositionConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.ProcessChecker" Collapsed="true">
+    <Position X="13.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAABAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>ProcessChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PMAC" Collapsed="true">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAQAAAAAAAAAAAAAACAAAAAEAAAAAAAMAAAAAAAEAA=</HashCode>
+      <FileName>PMAC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SystemAlign.squre" Collapsed="true">
+    <Position X="0.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAEAAQAAAAAAAEAABFAAAAAAAAA=</HashCode>
+      <FileName>squre.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Delegate Name="SystemAlign.MyEvent1" Collapsed="true">
+    <Position X="13.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawArea.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventOneInsp" Collapsed="true">
+    <Position X="11.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventTwoInsp" Collapsed="true">
+    <Position X="18.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventMeaData1" Collapsed="true">
+    <Position X="18.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventMeaData2" Collapsed="true">
+    <Position X="20.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventMeaData3" Collapsed="true">
+    <Position X="22" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventMeaData4" Collapsed="true">
+    <Position X="8" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventOneInsp_Gap1" Collapsed="true">
+    <Position X="15" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventOneInsp_Gap2" Collapsed="true">
+    <Position X="16.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventOneInsp_BiCell" Collapsed="true">
+    <Position X="13.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.PasswordEditEvent1" Collapsed="true">
+    <Position X="20.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.VertualKeyboardEvent1" Collapsed="true">
+    <Position X="13.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.UserSelectEvent1" Collapsed="true">
+    <Position X="11.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.LoginCompliteEvent1" Collapsed="true">
+    <Position X="8" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.ModelRegEvent1" Collapsed="true">
+    <Position X="9.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.ModelRegEvent2" Collapsed="true">
+    <Position X="11.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.RecipeEvent2" Collapsed="true">
+    <Position X="22" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.RecipeEvent3" Collapsed="true">
+    <Position X="8" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.RecipeEvent4" Collapsed="true">
+    <Position X="9.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEventOneCntUmac" Collapsed="true">
+    <Position X="9.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>FormDlgMain.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEvent2" Collapsed="true">
+    <Position X="15" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Hough.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SystemAlign.MyEvent3" Collapsed="true">
+    <Position X="16.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAIAAAA=</HashCode>
+      <FileName>Hough.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

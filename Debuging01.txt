@@ -1,0 +1,74 @@
+		public void System_Config_Saving()
+		{
+			//설정한 화면의 값들을 리스트 배열에 저장한다. 
+			System_Config_Viewer_To_List_Data();
+		}
+
+
+        public void Vision_Config_Saving()
+        {
+            //설정한 화면의 값들을 리스트 배열에 저장한다. 
+            VisionLami_Config_Viewer_To_List_Data();
+            VisionLami_Config_UperGrid_To_List();
+            VisionLami_Config_DownGrid_To_List();
+        }
+
+        public void Recipe_Config_Saving()
+        {
+            if (uGrd_Recipe_Applying_ItemName_Check() == false)
+            {
+                this.Cursor = System.Windows.Forms.Cursors.Default;
+                return;
+            }
+            if (uGrd_Recipe_Applying_GraphNum_Check() == false)
+            {
+                this.Cursor = System.Windows.Forms.Cursors.Default;
+                return;
+            }
+
+            //그림상자의 이미지와 설정한 구역의 배율을 계산하고 저장한다.
+            RecipeGap_Config_Box_To_Image_Sum();
+
+            //설정한 화면의 값들을 리스트 배열에 저장한다. 
+            RecipeGap_Config_Viewer_To_List_Data();
+
+
+            //설정한 화면의 그리드 값들을 리스트 배열에 저장한다.
+            Recipe_Config_Viewer_To_UperGrid();
+            Recipe_Config_Viewer_To_DownGrid();
+
+            //설정한 화면의 검출 영역을 배열에 저장한다.
+            Recipe_Config_Viewer_To_List_Inspect_Uper();
+            Recipe_Config_Viewer_To_List_Inspect_Down();
+        }
+
+        public void All_Config_Saving()
+        {          
+            MainForm_ProgracessBar_Display_01("Model Recipe Saving !!", 10);
+            //시스템 설정 탭에서 적용되어져 있는 List의 항목을 레지스터에 기록한다.
+            System_Config_ListData_To_Register();
+
+            //비전부 설정 탭에서 적용되어져 있는 List의 항목을 레지스터에 기록한다.
+            Vision_Config_ListData_To_Register();
+            Vision_Config_UperGrid_To_Register();
+            Vision_Config_DownGrid_To_Register();
+            
+            MainForm_ProgracessBar_Display_01("Model Recipe Saving !!", 20);
+
+            //레시피 설정 탭에서 적용되어져 있는 List 항목을 레지스터에 기록한다.
+            Recipe_Config_ListData_To_Register();
+            Recipe_Config_UperGrid_To_Register();
+            Recipe_Config_DownGrid_To_Register();
+
+            //레시피 설정 탭에서 적용되어져 있는 ROI 정보를 레지스터에 기록한다.
+            Recipe_Config_UperInspect_To_Register();
+            Recipe_Config_DownInspect_To_Register();
+
+            //환경 설정 탭에서 적용되어져 있는 List 항목을 레지스터에 기록한다.
+            Equipment_Config_ListData_To_Register();
+            
+            MainForm_ProgracessBar_Display_01("Model Recipe Saving !!", 30);
+
+            //현재 적용되어져 있는 리스트 배열의 값을 현재 모델의 파일에 저장한다.
+            Model_Config_Add_List_To_File(LamiSystem.GetSet_Now_Model_Name, LamiSystem.GetSet_Now_Model_Number);            
+        }

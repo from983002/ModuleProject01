@@ -1,0 +1,6 @@
+private void Inspect_Ready_Ready_RecipeBoxZone_To_ImageZone_Check_Uper()
+함수에서 ROI의 값이 틀어지는 것을 확인할 수 있다.
+private void RecipeGap_Config_Box_To_Image_Sum()
+함수에서 가로세로 비율의 값을 셋한다.
+RecipeGap_drawArea1.pictureBox1.Image = Properties.Resources.BiCell_Top;
+RecipeGap_drawArea2.pictureBox1.Image = Properties.Resources.BiCell_Bot;

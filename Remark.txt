@@ -1,0 +1,1151 @@
+구조체를 사용할 때는 다음의 사항을 주의하는 점이 좋습니다.
+저만 그런지는 몰라도 가끔씩 헷갈릴 때가 있습니다.
+
+    복사하면 인스턴스가 두 개가 됩니다.
+    선언된 블록을 벗어나면 즉시 소멸됩니다. 
+    가비지 콜렉터는 구조체 소멸에 관여하지 않습니다.
+    선언시 필드는 자동으로 초기화됩니다.
+    선언시 필드에 기본적으로 할당되는 값은 없습니다. 
+    필드에 값을 할당하지 않으면 접근시에 에러를 뱉어냅니다.
+    값을 할당하는 것을 까먹지 않게 가급적 생성자를 사용합시다.
+    구조체의 필드에 프로퍼티를 사용하는 것은 비효율적입니다.
+
+
+
+마우스 이벤트는 속성창에
+
+이벤트 영역에 있지 않다.
+
+
+직접 손으로 타이핑 해서 구현해야한다고 한다.
+
+일단 이벤트핸들러를 등록한다.
+
+폼 클래스 내에 넣으면 된다.
+
+전 Form1_Load 이벤트 안에 넣었습니다.
+
+
+?
+1
+	
+this.MouseWheel += new MouseEventHandler(BaseForm_MouseWheel);
+
+
+
+그리고 중요한 휠 이벤트 내용
+
+휠은 e.Delta 변수로
+
+휠이 위로 올라갔는지 아래로 내려갔는지 알 수 있습니다.
+
+e.Delta 가 양수면 아래로
+
+음수면 위로 올라간것이며
+
+얼마나 올라갔는지를 알려면
+
+e.Delta값을 나눠서 사용하면 됩니다.
+
+ex) e.Delta/120
+
+
+	
+private void BaseForm_MouseWheel(object sender, MouseEventArgs e)
+{
+    bool IsReduce = true;
+ 
+    // 휠을 아래로 내리면
+    // 축소(Reduce)가 아닌 확대(Expand) 이므로 false 대입
+    if (e.Delta < 0)
+    {
+        IsReduce = false;
+    }
+ 
+    /* 셀의 크기가 셀의 한계 범위 안에 든다면
+    * ->  MinCellSize < 셀 사이즈 < MaxCellSize
+    * ResizeCellSize함수는 셀의 크기를 1씩 증가 혹은 감소 하고
+    * true를 리턴한다.
+    * 하지만, 셀 사이즈가 한계 크기와 같다면
+    * 셀 크기에는 변동이 없고 false를 리턴
+    * 리턴값이 true라면 화면을 다시 그린다.
+    */
+    if (MainBoard.ResizeCellSize(IsReduce) == true)
+    {
+        // 가로, 세로 셀의 개수를 다시 계산
+        MainBoard.CalcCellNum();
+        // 메인보드 다시 그림
+        this.Invalidate();
+    }
+}
+
+
+//맨 앞으로 이동, 맨 뒤로 이동
+panel.BringToFront();
+panel.SendToBack();
+
+ private void 축소_Click(object sender, EventArgs e)
+        {
+            Bitmap bit = (Bitmap)pictureBox1.Image;
+            Bitmap temp = new Bitmap(bit.Width, bit.Height, bit.PixelFormat);
+
+            double dZoom = 0.75;
+            Graphics gr = Graphics.FromImage(temp);
+            gr.DrawImage(bit, new RectangleF(0, 0, (float)(bit.Width * dZoom), (float)(bit.Height * dZoom)),
+                    new RectangleF(0, 0, bit.Width, bit.Height), GraphicsUnit.Pixel);
+
+            pictureBox1.Image = temp;
+
+        }
+
+
+        private void 확대_Click(object sender, EventArgs e)
+        {
+            Bitmap bit = (Bitmap)pictureBox1.Image;
+            Bitmap temp = new Bitmap(bit.Width, bit.Height, bit.PixelFormat);
+
+            double dZoom = 1.25;
+            Graphics gr = Graphics.FromImage(temp);
+            gr.DrawImage(bit, new RectangleF(0, 0, (float)(bit.Width * dZoom), (float)(bit.Height * dZoom)),
+                    new RectangleF(0, 0, bit.Width, bit.Height), GraphicsUnit.Pixel);
+
+            pictureBox1.Image = temp;
+
+        }
+
+ 
+
+test 해봣습니다. 잘 됩니다.
+
+
+//확대
+
+            Image img = pictureBox1.Image;
+            Bitmap bmpMod = new Bitmap(img.Width * 2, img.Height * 2);
+            Graphics g = Graphics.FromImage(bmpMod);
+            g.DrawImage(img, 0, 0, bmpMod.Width, bmpMod.Height);
+            g.Dispose();
+            pictureBox1.Image = bmpMod;
+
+//축소
+
+            Image img = pictureBox1.Image;
+            Bitmap bmpMod = new Bitmap(img.Width / 2, img.Height / 2);
+            Graphics g = Graphics.FromImage(bmpMod);
+            g.DrawImage(img, 0, 0, bmpMod.Width, bmpMod.Height);
+            g.Dispose();
+            pictureBox1.Image = bmpMod;
+
+
+this.Cursor = System.Windows.Forms.Cursors.WaitCursor; //  커서를 모래시계로 만들었다가..
+this.Cursor = System.Windows.Forms.Cursors.Default;  // 커서를 원래 모양으로 만들었습니다.
+int number;
+      bool result = Int32.TryParse(value, out number);
+      if (result)
+      {
+         Console.WriteLine("Converted '{0}' to {1}.", value, number);         
+      }
+      else
+      {
+         if (value == null) value = ""; 
+         Console.WriteLine("Attempted conversion of '{0}' failed.", value);
+      }
+
+
+1mm = 3.779527559 pixel
+1pixel = 0.26458333 mm
+
+위와 같은 단위 변환을 생각하여 계산할것
+그 외의 단위는
+http://www.translatorscafe.com/cafe/units-converter/typography/calculator/pixel-(X)-to-centimeter-%5Bcm%5D/
+이 사이트이 단위 변환기를 이용하면 된다.
+
+
+BOOL MilGetImage(int Channel,IplImage * &dst)
+ 26    {
+ 27        try
+ 28        {
+ 29            MbufClear(MilImageDisp, 0);
+ 30            MdigChannel(MilDigitizer, Channel);
+ 31            MdigGrab(MilDigitizer, MilImageDisp);
+ 32            
+ 33            int w=MbufInquire(MilImageDisp,M_SIZE_X,M_NULL);;
+ 34            int h=MbufInquire(MilImageDisp,M_SIZE_Y,M_NULL);;
+ 35            int band=MbufInquire(MilImageDisp,M_SIZE_BAND,M_NULL);;
+ 36            int pitch=MbufInquire(MilImageDisp,M_PITCH_BYTE,M_NULL);;
+ 37            //IplImage *dst=cvCreateImage(cvSize(w,h),8,band);
+ 38            if(!dst)
+ 39                dst=cvCreateImage(cvSize(w,h),8,band);
+ 40            
+ 41            //CHECK_EXIT(dst->width==w && dst->height==h && dst->nChannels=band);
+ 42            char* p=dst->imageData;
+ 43            MbufGet(MilImageDisp,p);
+ 44        }
+ 45        catch()
+ 46        {
+ 47            return FALSE; 
+ 48        }
+ 49
+ 50        return TRUE;
+ 51    };
+
+
+이렇게 Start 버튼을 두번 클릭 하고
+
+폼을 닫아 소멸자를 호출해 Free 를 하려 하면,
+
+ 
+
+MIL.MbufFree( MilImageSrc );  는 에러 없이 넘어 가지만,
+
+MIL.MsysFree(MilSystem); 여기서 에러가 난다.
+
+ 
+
+분명 나는 MIL.MbufFree( MilImageSrc );  ; 이 구문으로 먼저 이미지 버퍼를 해제 했지만,
+
+사라진 메모리는, 나중에 할당 받은 메모리 2 뿐이고,
+
+가비지 컬렉터가 아직 동작하지 않아 어딘가 쓰레기로 남아있는 메모리 1이 아직 MilSystem 을 참조 하고 있기 때문에!!!!!!
+
+MIL.MsysFree(MilSystem); 에서 저런 에러가 나는 것 같다.
+
+ 
+
+가비지 컬렉터는 메모리 1이 아직 MilSystem 을 참조 하고 있어서 이놈을 치우지 않고,
+
+MilSystem 도 메모리 1이 자신을 참조 하고 있어서 Free 할 때 저런 에러를 띄우는 듯. 
+
+ 
+
+뭐.. 매뉴얼에서 발견한 관련 내용이 없어 내가 추측한 내용이라. ~~ 것 같다. 라고 써놨지만.
+
+거의 확실하다고 생각한다.
+
+ 
+
+Start 버튼 클릭 메시지 함수 초입에 아래와 같은 내용을 쓰면,
+
+ 
+
+if (MilImageSrc != MIL.M_NULL)
+
+ MIL.MbufFree(MilImageSrc); 
+
+아무리 반복해서 버튼을 클릭해도 에러가 안나거든..
+
+ 
+
+어찌보면 당연한 코드와 당연한 내용인것 같은데.
+
+ 
+
+난 이거 알아내는게 정말 힘들었어.
+
+[출처] C# 에서 MIL 이용한 영상처리 중 자주 만나는 에러, free error|작성자 무념
+
+밀 아이디형태의 전역 변수 선언
+MIL_ID m_MilDigitizer;
+MIL_ID m_MilSystem;
+MIL_ID m_MilApplication;
+MIL_ID m_MilImage;
+
+
+초기화
+MappAllocDefault(M_SETUP, &m_MilApplication, &m_MilSystem, M_NULL, &m_MilDigitizer, &m_MilImage);
+
+
+이미지 획득
+MdigGrab(m_MilDigitizer, m_MilImage);
+
+IplImage(m_pImgW_Org)로 복사...
+MbufGet2d(m_MilImage, 시작 x좌표 , 시작 Y 좌표 , m_Wid_Whole, m_Hei_Whole, m_pImgW_Org->imageData );
+
+[출처] MIL과 opencv연동을 시키려 합니다.. (OpenCV KOREA 대한민국 최고의 컴퓨터비젼 커뮤니티) |작성자 크리스
+
+
+ CvCapture* capture1 = 0;
+ IplImage *img;
+ capture1 = cvCaptureFromCAM_MIL(0); 
+ cvNamedWindow( "INPUT IMAGE", 0);
+ 
+
+ while(1)
+ {
+  img = cvQueryFrame(capture1);
+
+        cvShowImage( "INPUT IMAGE", img);
+        if( cvWaitKey(10) >= 0 )
+            break;
+ } 
+
+    cvReleaseCapture( &capture1 );
+    cvDestroyWindow( "INPUT IMAGE" );
+
+[출처] MIL과 OpenCV연동에 관한 질문입니다. (OpenCV KOREA 대한민국 최고의 컴퓨터비젼 커뮤니티) |작성자 쭌
+
+
+
+
+
+
+옵튼 에러 발생시 stdafs.cpp 인클르드 위에 #define _CRT_SECURE_NO_WARNINGS 를 기술해 준다.
+
+#include "stdafx.h"
+#include <iostream>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
+#define PI 3.1415926
+
+class LineFinder {
+private:
+	cv::Mat img; // 원 영상
+	std::vector<cv::Vec4i> lines; // 선을 감지하기 위한 마지막 점을 포함한 벡터
+	double deltaRho;
+	double deltaTheta; // 누산기 해상도 파라미터
+	int minVote; // 선을 고려하기 전에 받아야 하는 최소 투표 개수
+	double minLength; // 선에 대한 최소 길이
+	double maxGap; // 선에 따른 최대 허용 간격
+
+public:
+	LineFinder() : deltaRho(1), deltaTheta(PI / 180), minVote(10), minLength(0.), maxGap(0.) {}
+	// 기본 누적 해상도는 1각도 1화소 
+	// 간격이 없고 최소 길이도 없음
+
+	// 해당 세터 메소드들
+
+	// 누적기에 해상도 설정
+	void setAccResolution(double dRho, double dTheta) {
+		deltaRho = dRho;
+		deltaTheta = dTheta;
+	}
+
+	// 투표 최소 개수 설정
+	void setMinVote(int minv) {
+		minVote = minv;
+	}
+
+	// 선 길이와 간격 설정
+	void setLineLengthAndGap(double length, double gap) {
+		minLength = length;
+		maxGap = gap;
+	}
+
+	// 허프 선 세그먼트 감지를 수행하는 메소드
+	// 확률적 허프 변환 적용
+	std::vector<cv::Vec4i> findLines(cv::Mat& binary) {
+		lines.clear();
+		cv::HoughLinesP(binary, lines, deltaRho, deltaTheta, minVote, minLength, maxGap);
+		return lines;
+	} // cv::Vec4i 벡터를 반환하고, 감지된 각 세그먼트의 시작과 마지막 점 좌표를 포함.
+
+	// 위 메소드에서 감지한 선을 다음 메소드를 사용해서 그림
+	// 영상에서 감지된 선을 그리기
+	void drawDetectedLines(cv::Mat &image, cv::Scalar color = cv::Scalar(255, 255, 255)) {
+
+		// 선 그리기
+		std::vector<cv::Vec4i>::const_iterator it2 = lines.begin();
+
+		while (it2 != lines.end()) {
+			cv::Point pt1((*it2)[0], (*it2)[1]);
+			cv::Point pt2((*it2)[2], (*it2)[3]);
+			cv::line(image, pt1, pt2, color);
+			++it2;
+		}
+	}
+};
+
+
+
+extern "C" __declspec(dllexport) void Searching_Line(char* imgPath)
+{
+	IplImage * image = cvLoadImage(imgPath);
+	cvShowImage("Test Image", image);
+	cvWaitKey(0);
+	cvReleaseImage(&image);
+	return;
+}
+
+/*
+extern "C" __declspec(dllexport) void Searching_Line(char* imgPath)
+{
+	IplImage * imageLoad = cvLoadImage(imgPath);
+	cv::Mat image = cv::imread(imgPath);
+
+	//캐니 알고리즘 적용
+	cv::Mat contours;
+	cv::Canny(image, contours, 125, 350);
+
+	LineFinder ld;
+
+	//확율적 허프변환 파라미터 설정하기
+	ld.setLineLengthAndGap(100, 20);
+	ld.setMinVote(80);
+	
+	std::vector<cv::Vec4i> li = ld.findLines(contours);
+
+	//선의 처 번째에 속한 것으로 보니은 점 집합을 추출하기 위해 다음과 같이 진행
+	//검은 영상에 햐얀 선을 그리 후 그 선을 감지하기 위해 사용하는 외곽선의 캐니 영상으로 함께 교차
+	int in = 0;//0번째 선 선택
+	cv::Mat oneline(image.size(), CV_8U, cv::Scalar(0));
+	
+	//흰색 선을 특정 두께 5를 갖는 선을 그림.
+	int n = 0;
+	cv::line(oneline, cv::Point(li[n][0], li[n][1]), cv::Point(li[n][2], li[n][3]), cv::Scalar(255), 5);
+	
+	cv::bitwise_and(contours, oneline, oneline);
+
+	//외관선과 하얀 선 간의 AND
+	//결과는 지정한 선고 관련된 점만 포함
+
+	//검은 영상과 하얀 선을 반전시킴
+	cv::Mat onelineInv;
+	cv::threshold(oneline, onelineInv, 128, 255, cv::THRESH_BINARY_INV);
+	cv::namedWindow("One Line");
+	cv::imshow("One line", onelineInv);
+
+	//이 중 반복문으로 집합 내에 있는 점의 좌표를 cv::Points의 std::vector에 삽입
+	std::vector<cv::Point> points;
+
+	//모든 점 위치를 얻기 위한 화소 조회
+	for (int y = 0; y < oneline.rows;y++)
+	{
+		uchar* rowPtr = oneline.ptr<uchar>(y);
+		for (int x = 0; x < oneline.cols;x++)
+		{
+			//외곽선에 있다면
+			if (rowPtr[x])
+			{
+				points.push_back(cv::Point(x, y));
+			}
+		}
+	}
+	
+	//cv::fitLine을 호출해 가장 적합한 선을 찾음
+	cv::Vec4f line;
+	cv::fitLine(cv::Mat(points), line, CV_DIST_L2, 0, 0.01, 0.01);
+	//단위 방햐 ㅇ벡터(Vec4f의 첫 두개 값),
+	//선에 놓인 한 점의 좌표(Vec4f의 마지막 두 값) 현대인 선 방정식의 파라미터를 제공
+	//마지막 두 파라미터는 선 파라미터에 대한 요구 정확도를 지정
+	//함수에서 요구 하는 vector 내에 포함된 입력 점은 Mat로 전달
+
+	//선 방정식은 일부 속설계산에 사용
+	//올바른 선을 계산하는지 확인하기 위해 영상에 예상 선을 그림
+	//200화소 길이와 3화소 두께를 갖는 임의의 검은 세그먼트를 그림
+	int x0 = line[2];
+	int y0 = line[3];
+	int x1 = x0 - 200 * line[0];
+	int y1 = y0 - 200 * line[1];
+	image = cv::imread(imgPath, 0);
+	cv::line(image, cv::Point(x0, y0), cv::Point(x1, y1), cv::Scalar(0), 3);
+	cv::namedWindow("Estimated line");
+	cv::imshow("Estimated line", image);
+	cv::waitKey();
+	return;
+}
+*/
+
+
+// VisionLibrary01.cpp : 해당 DLL의 초기화 루틴을 정의합니다.
+//
+
+
+//#include <iostream>
+//#include <opencv2/core/core.hpp>
+//#include <opencv2/highgui/highgui.hpp>
+//#include <opencv2/imgproc/imgproc.hpp>
+
+
+//#include "stdafx.h"
+//#include "VisionLibrary01.h"
+//#include "LineFinder.h"
+
+#include "stdafx.h"
+#include "VisionLibrary01.h"
+//#include "LineFinder.h"
+#include "LineFinder.cpp"
+
+#include <opencv\cv.h>
+#include <opencv\highgui.h>
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
+
+ [DllImport("opencvLibrary01.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern void IplImage_Display(string imgPath);
+
+
+
+[System.Runtime.InteropServices.DllImport("user32.dll")]
+
+public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+private const int WM_SHOWNOACTIVATE = 4;
+
+
+AlimPopup ap = new AlimPopup();
+
+ShowWindow(ap.Handle, WM_SHOWNOACTIVATE);
+
+ 
+
+요렇게 사용하는 방법이 있습니다.
+
+도움이 되셨길 바랍니다.
+
+
+
+
+private String currentFile = string.Empty;
+
+        public Form1()
+        {
+            InitializeComponent();
+            if (File.Exists("settings.dat"))
+            {
+                FileStream stream = new FileStream("settings.dat", FileMode.Open);
+                BinaryFormatter formatter = new BinaryFormatter();
+                Font font = (Font)formatter.Deserialize(stream);
+                stream.Close();
+
+                txtContent.Font = font;
+                
+            }
+        }
+        //새로만들기메뉴
+        private void miNew_Click(object sender, EventArgs e)
+        {
+            if (txtContent.Modified)
+            {
+                DialogResult result = MessageBox.Show(
+                    "파일의 내용이 변경되었습니다.\r\n\r\n" +
+                    "변경된 내용을 저장하시겠습니까?", //표시문자열
+                    "메모장", // 제목
+                    MessageBoxButtons.YesNoCancel);//버튼종류
+                if (result == DialogResult.Yes)
+                {
+                    if (string.IsNullOrEmpty(currentFile))
+                    {
+                        //파일저장
+                        SaveFileDialog dlg2 = new SaveFileDialog();
+                        dlg2.FileName = "*.txt"; // 파일 초기 이름
+                        //표시될문자열|필터링파일종류;필터링파일종류;....
+                        dlg2.Filter = "텍스트문서 (*.txt)|*.txt|모든 파일(*.*)|*.*";
+                        if (dlg2.ShowDialog() == DialogResult.OK)
+                        {
+                            currentFile = dlg2.FileName;
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    StreamWriter writer = new StreamWriter(currentFile);
+                    writer.Write(txtContent.Text);
+                    writer.Close();
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+            txtContent.Clear();
+            currentFile = string.Empty;
+        }
+        //열기메뉴
+        private void miOpen_Click(object sender, EventArgs e)
+        {
+            if (txtContent.Modified) // 텍스트박스가 수정 되었는지 확인
+            {
+                DialogResult result = MessageBox.Show(
+                    "파일의 내용이 변경되었습니다.\r\n\r\n" +
+                    "변경된 내용을 저장하시겠습니까?", //표시문자열
+                    "메모장", // 제목
+                    MessageBoxButtons.YesNoCancel);//버튼종류
+                if (result == DialogResult.Yes)
+                {
+                    if (string.IsNullOrEmpty(currentFile))
+                    {
+                        //파일저장
+                        SaveFileDialog dlg2 = new SaveFileDialog();
+                        dlg2.FileName = "*.txt"; // 파일 초기 이름
+                        //표시될문자열|필터링파일종류;필터링파일종류;....
+                        dlg2.Filter = "텍스트문서 (*.txt)|*.txt|모든 파일(*.*)|*.*";
+                        if (dlg2.ShowDialog() == DialogResult.OK)
+                        {
+                            currentFile = dlg2.FileName;
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    StreamWriter writer = new StreamWriter(currentFile);
+                    writer.Write(txtContent.Text);
+                    writer.Close();
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+                miSave_Click(this, EventArgs.Empty);
+            }
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.FileName = "*.txt";
+            dlg.Filter = "텍스트문서 (*.txt)|*.txt|모든 파일(*.*)|*.*";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader reader = new StreamReader(dlg.FileName);
+                txtContent.Text = reader.ReadToEnd();
+                reader.Close();
+
+                currentFile = dlg.FileName;
+            }
+        }
+        //저장메뉴
+        private void miSave_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(currentFile))
+            {
+                //파일저장
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.FileName = "*.txt"; // 파일 초기 이름
+                //표시될문자열|필터링파일종류;필터링파일종류;....
+                dlg.Filter = "텍스트문서 (*.txt)|*.txt|모든 파일(*.*)|*.*";
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    currentFile = dlg.FileName;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            StreamWriter writer = new StreamWriter(currentFile);
+            writer.Write(txtContent.Text);
+            writer.Close();
+        }
+        //다른이름으로 저장
+        private void miSaveAs_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.FileName = "*.txt"; // 파일 초기 이름
+            //표시될문자열|필터링파일종류;필터링파일종류;....
+            dlg.Filter = "텍스트문서 (*.txt)|*.txt|모든 파일(*.*)|*.*";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                currentFile = dlg.FileName;
+            }
+            else
+            {
+                return;
+            }
+            StreamWriter writer = new StreamWriter(currentFile);
+            writer.Write(txtContent.Text);
+            writer.Close();
+        }
+        // 끝내기
+        private void miEx_Click(object sender, EventArgs e)
+        {
+            if (txtContent.Modified)
+            {
+                DialogResult result = MessageBox.Show(
+                    "파일의 내용이 변경되었습니다.\r\n\r\n" +
+                    "변경된 내용을 저장하시겠습니까?", //표시문자열
+                    "메모장", //제목
+                    MessageBoxButtons.YesNoCancel);//버튼종류
+                if (result == DialogResult.Yes)
+                {
+                    if (string.IsNullOrEmpty(currentFile))
+                    {
+                        SaveFileDialog dlg2 = new SaveFileDialog();
+                        dlg2.FileName = "*.txt";
+                        dlg2.Filter =
+                            //표시될문자열|필터링파일종류;필터링파일종류;...
+                            "텍스트문서(*.txt)|*.txt|모든 파일(*.*)|*.*";
+                        if (dlg2.ShowDialog() == DialogResult.OK)
+                        {
+                            currentFile = dlg2.FileName;
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    StreamWriter writer =
+                            new StreamWriter(currentFile);
+                    writer.Write(txtContent.Text);
+                    writer.Close();
+                }
+                else if (result == DialogResult.Cancel)
+                    return;
+            }
+
+            Close();
+        }
+        //줄 바꿈
+        private void miWrap_Click(object sender, EventArgs e)
+        {
+            txtContent.WordWrap = !txtContent.WordWrap;
+        }
+        //글꼴
+        private void miFont_Click(object sender, EventArgs e)
+        {
+            FontDialog dlg = new FontDialog();
+            dlg.Font = txtContent.Font;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                txtContent.Font = dlg.Font;
+                FileStream stream = new FileStream("settings.dat", FileMode.Create);
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(stream, dlg.Font);
+                stream.Close();
+            }
+        }
+        //폼이 꺼질떄
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+              if (txtContent.Modified)
+            {
+                DialogResult result = MessageBox.Show(
+                    "파일의 내용이 변경되었습니다.\r\n\r\n" +
+                    "변경된 내용을 저장하시겠습니까?", //표시문자열
+                    "메모장", //제목                                 //아이콘
+                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);//버튼종류
+                if (result == DialogResult.Yes)
+                {
+                    if (string.IsNullOrEmpty(currentFile))
+                    {
+                        SaveFileDialog dlg2 = new SaveFileDialog();
+                        dlg2.FileName = "*.txt";
+                        dlg2.Filter =
+                            //표시될문자열|필터링파일종류;필터링파일종류;...
+                            "텍스트문서(*.txt)|*.txt|모든 파일(*.*)|*.*";
+                        if (dlg2.ShowDialog() == DialogResult.OK)
+                        {
+                            currentFile = dlg2.FileName;
+                        }
+                        else
+                        {
+                            e.Cancel = true;//종료 작업 중지
+                            return;
+                        }
+                    }
+                    StreamWriter writer =
+                            new StreamWriter(currentFile);
+                    writer.Write(txtContent.Text);
+                    writer.Close();
+                }
+                else if (result == DialogResult.Cancel)
+                    e.Cancel = true;//종료 작업 중지
+            }
+
+            //Close();      
+        }
+    }
+
+
+
+주의 사항: 레퍼런스에 System.Drawing 어셈블리를 첨가 하십시오.
+
+using System;
+
+using System.IO;
+
+using System.Drawing;          //System.Drawing assembly를 첨부하야만 합니다.
+
+ 
+
+namespace ConsoleApplication1
+
+{
+
+  class Class1
+
+  {
+
+    [STAThread]
+
+    static void Main(string[] args)
+
+    {
+
+      //파일 이름
+
+      string fname = "case1.jpg"; //test file name, here
+
+      // 파일 스트림 생성
+
+      using (FileStream fs = new FileStream(fname, FileMode.Open, FileAccess.Read, FileShare.Read))
+
+      {
+
+       //메모리 스트림 생성
+
+        MemoryStream ms = new MemoryStream();
+
+        byte[] barr = new byte[fs.Length];
+
+        fs.Read(barr, 0, (int)fs.Length); // 파일의 내용을 바이트 배열로
+
+        ms.Write(barr, 0, barr.Length);
+
+        ms.Seek(0, SeekOrigin.Begin);  // 바이트 배열을 메모리 스트림으로
+
+ 
+
+        // modify memory stream here
+
+       // ...
+
+ 
+
+       // 메모리 스트림에 저장된 영상정보를 GDI를 사용하여 비트맵으로
+
+        System.Drawing.Image image = System.Drawing.Bitmap.FromStream(ms);
+
+        image.Save("xx.bmp");
+
+      }
+
+    }
+
+  }
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+namespace mydeleteTest
+{
+	public delegate void MyEventHandler(string message);
+
+    internal class Publisher
+    {
+        public event MyEventHandler Active;
+
+        public void DoActive(int number)
+        {
+            Active("message");
+
+        }
+    }
+
+    internal class MyClass
+    {
+        public void MyEventHandler(string message)
+        {
+            Trace.WriteLine(message);
+        }
+
+        public MyClass(String[] args)
+        {
+            Publisher publisher = new Publisher();
+            publisher.Active += new MyEventHandler(MyEventHandler);
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<이미지(PNG)파일을 BitmapImage로 처리>
+ResourceManager rm = new ResourceManager("<프로젝트명>.Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+            Bitmap bitmapimg = (Bitmap)rm.GetObject("이미지명");
+//예를들어 Myimg.png를 읽어 리소스 매니저에서Myimg1이 되었다면 Myimg1을 적어야 한다.
+
+            Image img = (Image)bitmapimg;
+            MemoryStream ms = new MemoryStream();
+            img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+
+BitmapImage largeImage = new BitmapImage();
+            largeImage.BeginInit();
+            largeImage.DecodePixelHeight = 32;//사이즈를 지정해 주고 싶다면 셋팅한다
+            largeImage.DecodePixelWidth = 32;//사이즈를 지정해 주고 싶다면 셋팅한다
+            largeImage.StreamSource = ms;//uriImage; //urisourse로 불어온다면 간단하지만 리소스를 불러 올때는
+//위와같은 단계가 필요하다.
+            largeImage.EndInit();
+
+<아이콘(ICO) 파일 처리>
+ResourceManager rm = new ResourceManager("ConvertWallType.Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+                    Icon iconimg = (Icon)rm.GetObject("logo");
+                    ui.Icon = iconimg;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//리소스 추가하여 사용하기
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1.솔루션 탐색기에서
+2.Properties로 가서
+3.그리드 창 상단 오른쪽의 범주를 선택하여 본다.(텍스트, 이미지, 아이콘, 파일, 기타)
+4.추가, 제거를 진행할 수 있다.
+
+
+
+// Scroll 화면분할 속성
+
+ultraGrid1.DisplayLayout.MaxColScrollRegions = 5;
+
+ultraGrid1.DisplayLayout.MaxRowScrollRegions = 5;
+
+ 
+
+// Bounding 에서 등록되지 않은 필드에 대한 처리
+
+ultraGrid1.DisplayLayout.NewColumnLoadStyle = Infragistics.Win.UltraWinGrid.NewColumnLoadStyle.Hide;
+
+ 
+
+ 
+
+// ActiveCell.BackColor & ForeColor 설정
+
+ultraGrid1.DisplayLayout.Override.ActiveCellAppearance.BackColor = System.Drawing.SystemColors.Window;
+
+ultraGrid1.DisplayLayout.Override.ActiveCellAppearance.ForeColor = System.Drawing.SystemColors.ControlText;
+
+ 
+
+ 
+
+// ActiveRow.BackColor & ForeColor 설정
+
+ultraGrid1.DisplayLayout.Override.ActiveRowAppearance.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(230)), ((System.Byte)(238)), ((System.Byte)(240)));
+
+ultraGrid1.DisplayLayout.Override.ActiveRowAppearance.ForeColor = Color.White;
+
+ 
+
+ 
+
+// 셀과 Row의 그리드선 처리
+
+ultraGrid1.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dashed;
+
+ultraGrid1.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dashed;
+
+ 
+
+// Cell click action : Row 선택 또는 셀 수정 등의 속성
+
+ultraGrid1.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.RowSelect;
+
+ 
+
+// Row 높이 조절 : Default = -1
+
+ 
+
+ultraGrid1.DisplayLayout.Override.DefaultRowHeight = 50;
+
+ 
+
+// Header의 속성
+
+ultraGrid1.DisplayLayout.Override.HeaderAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+
+ultraGrid1.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.Default;//.Select;//.SortMulti;
+
+ultraGrid1.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
+
+ 
+
+// 홀수 줄 바탕색
+
+ultraGrid1.DisplayLayout.Override.RowAlternateAppearance.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(242)), ((System.Byte)(247)), ((System.Byte)(251)));
+
+ 
+
+// Row 문자열의 수직위치 조절
+
+ultraGrid1.DisplayLayout.Override.RowAppearance.TextVAlign = Infragistics.Win.VAlign.Middle;
+
+ 
+
+// SelectedRow.BackColor & ForeColor 설정
+
+ultraGrid1.DisplayLayout.Override.SelectedRowAppearance.BackColor = System.Drawing.SystemColors.Window;
+
+ultraGrid1.DisplayLayout.Override.SelectedRowAppearance.ForeColor = System.Drawing.SystemColors.ControlText;
+
+ 
+
+// Column0 에 RowIndex 추가
+
+//ultraGrid1.DisplayLayout.Override.RowSelectorNumberStyle = Infragistics.Win.UltraWinGrid.RowSelectorNumberStyle.RowIndex;
+
+ 
+
+//ultraGrid1.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.True;
+
+ 
+
+//ultraGrid1.DisplayLayout.Override.RowSelectorAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+
+ 
+
+// SelectedRow.BackColor 설정
+
+ultraGrid1.DisplayLayout.Override.SelectedRowAppearance.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(242)), ((System.Byte)(247)), ((System.Byte)(251)));
+
+ultraGrid1.DisplayLayout.Override.SelectTypeRow = Infragistics.Win.UltraWinGrid.SelectType.Single;
+
+ 
+
+// Scroll이 최하단으로 내려갔을때 빈공간이 없도록 설정
+
+ultraGrid1.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
+
+ 
+
+Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+
+appearance1.ForeColor = System.Drawing.Color.Purple;
+
+ultraGrid1.DisplayLayout.Override.CellAppearance = appearance1;
+
+ 
+
+// Row Header 삭제
+
+this.ultraGrid2.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
+
+ 
+
+ 
+
+//외에 많은 속성 편집들이 있는데...
+
+//아래 코드는 각 컬럼별로 코드에서 (편집모드로)속성을 설정한 부분입니다.
+
+ 
+
+//sender = UltraGrid;
+
+ultraGrid1.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
+
+ 
+
+//Infragistics.Win.UltraWinGrid.BandsCollection ugdBands;
+
+//ugdBands = ultraGrid1.DisplayLayout.Bands;
+
+ 
+
+//ugdBands[0].Columns["a"].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+
+//ugdBands[0].Columns["a"].Width = 40;
+
+//ugdBands[0].Columns["a"].CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
+
+//ugdBands[0].Columns["b"].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+
+//ugdBands[0].Columns["b"].Width = 80;
+
+//ugdBands[0].Columns["b"].Hidden = true;
+
+//ugdBands[0].Columns["c"].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Left;
+
+//ugdBands[0].Columns["c"].Width = 170;
+
+//ugdBands[0].Columns["c"].MaxLength = 20;
+
+//ugdBands[0].Columns["c"].CellActivation = Infragistics.Win.UltraWinGrid.Activation.AllowEdit;
+
+//ugdBands[0].Columns["d"].CellAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
+
+//ugdBands[0].Columns["d"].Width = 80;
+
+//ugdBands[0].Columns["d"].Style = Infragistics.Win.UltraWinGrid.ColumnStyle.DropDownList;
+
+//ugdBands[0].Columns["d"].ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always;
+
+//Infragistics.Win.ValueList oValueList2 = new Infragistics.Win.ValueList();
+
+//oValueList2.ValueListItems.Add("Y", "Yes");
+
+//oValueList2.ValueListItems.Add("N", "No");
+
+//ugdBands[0].Columns["d"].ValueList = oValueList2;
+
+//ultraGrid1.DisplayLayout.Override.ActiveCellAppearance.Reset();
+
+//ultraGrid1.DisplayLayout.Override.ActiveRowAppearance.Reset();
+
+ 
+
+/*
+
+Infragistics.Win.UltraWinGrid.UltraDropDown uDrop = new UltraDropDown();
+
+this.ultraGrid1.DisplayLayout.Bands[0].Columns[0].EditorControl = uDrop;
+
+this.ultraGrid1.DisplayLayout.Bands[0].Columns[0].Style = Infragistics.Win.UltraWinGrid.ColumnStyle.DropDownValidate;
+
+*/
+
+
+new System.Windows.Interop.WindowInteropHelper(this).Handle
+
+요정도 해줘야 핸들이 따라온다 ㅎㅎ
+
+나머진 C#과 동일하므로 생략!!
+
+모르면 같다 붙여보고, 컴파일해보고, 머 그러다보면 알게 되고 ㅎㅎ 수고요~
+
+
+
+[DllImportAttribute("user32.dll")]
+public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+[DllImportAttribute("user32.dll")]
+public static extern bool ReleaseCapture();
+public const int HT_CAPTION = 0x02;
+public const int WM_NCLBUTTONDOWN = 0xA1;
+
+protected override void OnMouseDown(System.Windows.Input.MouseButtonEventArgs e){
+
+            ReleaseCapture();
+            SendMessage(new System.Windows.Interop.WindowInteropHelper(this).Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+}
+
+ private void Inspect_Run_Run_RunningTime_Computing()
+        {
+            //hours = (insec / (1000 * 60 * 60)) % 24;
+            //minutes = (insec / (1000 * 60)) % 60;
+            //seconds = (insec / 1000) % 60;
+        }
+
+
+2.8.1.
+클래스
+/// <summary>
+/// 클래스 명: EventLog
+/// 작성 목적 : 이벤트소스와 로그파일명에 의하여 이벤트정보 기록
+/// 작 성 자 : 홍길동
+/// 최초작성일: 2005.05.10
+/// 최종수정일: 2005.05.20
+/// 수정 내역 :
+/// 2005.05.10 : Exception 내역에 대하여서만 Event Log에기록되는 것으로 가정하여 작성
+/// 2005.05.20 : Exception이 발생하지 않아도 Event Log에 기록될 수 있도록 수정
+/// </summary>
+
+2.8.2.
+매서드
+/// <summary>
+/// 이벤트소스와 로그파일명에 의하여 이벤트 정보 기록
+/// </summary>
+/// <param name="eventSource">이벤트 원본 사용 예제)BizTalk</param>
+/// <param name="eventLog">이벤트 로그 이름</param>
+/// <param name="eventType">이벤트 유형 (정보, 경고, 오류)</param>
+/// <param name="eventMessage">이벤트 내용</param>
+/// <returns>
+/// 반환값 없음
+/// </returns>
+/// <exception cref="System.Exception">
+/// 이벤트 유형이 오류이면 Exception발생
+/// </exception> 

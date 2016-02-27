@@ -1,0 +1,368 @@
+﻿기존 C++코드를 사용하기 위한 절차
+1.프로젝트 > 구성 속성 > 일반 > 공용 언어 런타임 지원 > 공용 언어 런타임 지원(/clr)
+ : 위와 같이 설정하면 에러가 발생한다. error D8016:/clr 과 /ZI 명령줄 옵션이 호환되지 않습니다.
+   아래의 설정을 진행하면 된다.
+2.프로젝트 > 구성 속성 > C/C++ > 코드 생성 > 최소 다시 빌드 가능 > 삭제
+3.프로젝트 > 구성 속성 > C/C++ > 코드 생성 > 기본 런타임 검사 > 기본값
+
+
+#ifdef대신에 아래의 #if를 사용한다.
+#if DEBUG
+    Console.WriteLine("Log....");
+#endif
+
+유브이 출구 도어 ㅣ 26번
+바코드 : 32번
+비젼 : 35번 
+리젝 : 38번
+
+Axis 설정의 Home 속도, 가속은 Axis의 First vel, Second vel로 사용한다.
+
+서브는 제품 잡고 올린상태에서 리버스가 작업을 마치고 최종 지점에서 
+Z를 올린 상태에 오기 전까기 전까지 그대로 대기한다.
+
+리시브에서 간섭 회피 좌표
+X축 이동시 : Y는 124이상 되어야 한다.
+Y축 이동시 : X는 40보다 작아야 한다.
+
+
+EziServo AxisStatus List
+0:에러가 하나이상 발생함.
+1:+리미트 센서 온
+2:-리미트 센서 온
+3:
+4:
+5:
+6:
+7:서보알람(8가지) 중 한가지 이상 발생
+19:Inposition 완료된 상태임
+20:모터가 Servo ON 상태임.
+21:알람리셋 명령이 실시된 상태임.
+22:
+23:원점센서가 ON되어 있는 상태임
+24:
+25:원점 복귀 운전이 완료된 상황임
+26:
+27:모터가 현재 운전중임.
+28:운전중 pause 명령으로 정지 상태임
+
+this.m_RecipeList.Add("CarrierFeed_Start_Point");
+            this.m_RecipeList.Add(double.Parse(this.CarrierM4.Text));
+
+로더부 레시피 : 로더 이동 시작 위치, 로더 이동 거리 입력받음
+
+
+Out27 : On-close-In59  : Off-open-In58
+Out26 : On-down-In57  : Off-up-In56
+
+Product LocationData 명세
+//0 : 로딩 이전,
+        //1 : UV 진행중,
+        //2 : UV 완료,
+        //3 : Vision Test 진행중,
+        //4 : Vision Test 완료,
+        //5 : Reject 진행중
+        //6 : Reject Fail 와료
+        //7 : Reject Pass 완료
+        //8 : ReverseSub 진행중
+        //9 : ReverseSub 완료
+        //10: Reverse진행 중
+        //11: Reverse 완료
+        //12: 매거진  
+
+인36번 로더의 강제적으로 우측(X축)이동하려 시도하면 발생한다.
+
+인35번 로더의 실린더 하강시 감지하는 센서:홀에 정확히 안착되지 않았을경우(케리어 앞뒤 바뀌었을경우 검출)용 이다.
+
+17번(로더) 다운:38, 업 : 37
+
+스토퍼 업은 17번 다운은 18번
+
+입력 1번 센서 : 앞에서 팅겨준 케리어 감지 한 후 캐리어 스토퍼 올려서 스톱 시킨 후 로더 후크 하강시킴.
+그런 후 2번 센서가 감지되는 위치까지 로더가 이동시킨다.
+
+그 후 피더가 하강 후 20mm씩 이동하면서 3번째 센서가 감지되면 이후 로더가 케리어를 
+두번째 센서가 감지 되는 곳까지 이동시킬 수 있다.
+
+로더가 이동 시키는 거리는 1번에 80mm씩 이동시킨다.
+
+클래스 생성시 생성자가 가장 먼저 실행되고 다음으로 로드가 실행된다.
+AX_InpOtp_Open_Module
+
+Motion Parameter :
+4
+3
+0
+0
+700000.000000
+1.000000
+0
+1.0000/1
+
+h
+l
+h
+h
+l
+l
+h
+l
+
+this.uDSConfigAssyThree.Rows.Add();
+            rowItemAssyThree = this.uDSConfigAssyThree.Rows[this.uDSConfigAssyThree.Rows.Count - 1];            
+            rowItemAssyThree[0] = "1";
+            rowItemAssyThree[1] = "1234567";
+            rowItemAssyThree[2] = "7654321";
+            rowItemAssyThree[3] = "1234567";
+            rowItemAssyThree[4] = "7654321";
+            rowItemAssyThree[5] = "1234567";
+            rowItemAssyThree[6] = "7654321";
+            rowItemAssyThree[7] = "1234567";
+            rowItemAssyThree[8] = "7654321";
+            this.AssyOneM138.Rows[this.AssyOneM138.Rows.Count - 1].Cells[0].Appearance.ForeColor = System.Drawing.Color.Red;
+
+//this.upnlAssyOneBack.ClientArea.Controls.Add(this.upnlMy2);
+// upnlAssyOneGround.ClientArea
+            // 
+            this.upnlAssyOneGround.ClientArea.Controls.Add(this.upnlAssyOneBack);
+
+window7 에서 폼의 크기및 콘트롤 크기및 좌표
+메인폼 : 1286 / 1030(가로세로 각각 3씩 더함)
+폼에 Fill로 Panal 넣은 후에 Panel의 크기 : 1280, 978(세로에서 메뉴와 스테이터스바(38)제외)
+위의 필페널 안에 페널의 크기 1274, 48일때 로케이션 6,3일때 화면 가로가 꽉찬다.
+
+즉 다음고 같이 작업하면 된다.
+1.폼의 크기는 1286 / 1030 으로 모니터 크기의 각각 6씩 더한 크기로 한다.
+2.폼의 메인 패널로 필을 넣는다. 필의 크기는 1280, 987이 된다. 스테이터스바 38, 메뉴바의 높이 제외된 것임
+3.메인 패널보다 가로사이즈 6작게 하고 로케이션을 6으로 놓으면 화면에 꽉참
+4.이후 부터는 원래 계산대로 진행하면 된다.
+
+//지정 축에서 설정된 신호를 검출한다. 리미트 센서시호나 원점 센서신호, 서보 드라이버의 
+//Z 상 신호 또는 범용 입력 신호들의 Edge를 검출할 수 있다. 
+//주로 원점검색 구동 구현 시 사용하는 함수이다.
+//parameter:축번호, 속도, 가속도, 검출신호 설정, 검출신호 엣지방향설정, 정지모드
+//AxmMoveSignalSearch(0, -50.000000, 100.000000, 1, 0, 0)
+//AxmMoveSignalSearch(0, -100.000000, 200.000000, 1, 0, 0)
+
+//1.IDetectSignal 이 PosEndLimit, NegEndLimit(0,1)을 찾을 경우 신호의 Active Level 상태를 검출한다.
+//2.AxmStatusReadInMotion 함수를 이용하여 현재 모션중인지 확인할 수 있다.
+//3.AxmSignalSetInpos 함수를 사용하는 경우에는 Inposiotion 입력신호가 Enable 로 설정되어 있다면
+//  Command 펄스 출력이 완료해도 INP 입력이 ON 되기 전까지는 모션이 완료되지 않은 것으로 간주되어
+//  반환 되지 않는다.(AxmSignalSetInpos 함수 참고)
+//4.SignalMethod 를 EMERGENCY_STOP(0)로 사용할경우 가감속이 무시되며 지정된 속도로 가속 급정지하게된다.
+//5.예제:01번축의 Z상 신호를 만나면 감속정지하면서 Falling Edge검출할때 아래와 같다.
+//  AxmMoveSignalSearch(0, 100.000000, 200.000000, 5, 0, 0)//(축, 속도, 가속도, 신호, 엣지)
+
+
+//하난의 축에 대하여 현재 위치에서 지정한 거리(절대/상대)만큼 이동을 수행한다.
+//Parameter(축번호, 구동거리, 속도, 가속도, 감속도)
+//AxmMoveStartPos(5, -5.819000, 600.000000, 6000.000000, 6000.000000);
+        
+//AxmMoveStartPos로 구동하기 위해서 선진행 되어야 하는 Process List
+//1.AxmMotSetAbsRelMode 함수를 이용하여 절대/상대를 선택한다.
+//2.AxmMotSetProfileMode 함수를 이용하여 프로파일을 선택한다.
+//3.AmxMoveStartPors 함수를 이용하여 구동을 진행한다.
+//4.AxmStatusReadInMotion 함수를 이용하여 현재 모션중인지 확인할 수 있다.
+
+
+표기법
+1.클래스명 대문자 사용
+2.함수명 첫문자 소문자 사용
+3.인터페이스 I 사용
+4.메서드나 함수이름은 동사이면서 소문자 시작
+4.compute, find, initialize, 
+5.접두어 n은 객체 수를 나타낸다. nPoints, nLines
+6.접미어 No는 엔티티(entity)번호를 나타내는 변수 . tableNo, employeeNo
+7.반위어 대응 : get/set, add/remove, create/destory, start/stop, insert/delete, increment/decrement, old/new, begin/end,
+               first/last, up/down, min/max, next/previous, ipen/close, show/hide, suspend/resume
+8.불린 변수이름 사용 : bool isError, bool isFound
+9.영거 사수는 고통타입이름 접두어 사용 : enum Color{ COLOR_RED, COLOR_GREEN, COLOR_BLUE };
+10.예외 클래스는 eXCEPTION 접미어를 붙인다. : class AccessException{}
+11.함수의 리턴되는 멤버의 이름은 반환하는 것의 존재를 기술한다.: computeSumResult
+   함수의 인자형의 이름은 인자가 하는 일을 알려주는 이름으로 하는것이 좋다.: firstData
+
+ionizer 정전기 제거 장치
+센서 : 포토센서, 마그네틱센서, 도어센서, 빔센서
+Solenoid Valve, Cylinder, speed controller, 
+servo motor, step motor,
+
+((Excel.Range)xlsSheet.Cells[row, col]).Value2.ToString().Trim();에서 
+row : 세로 번호
+col : 가로 번호
+
+현재 프로그램의 경로아래 a.wav를 읽는 방법(상대경로) : Application.StartupPath + @"\a.wav";
+
+Ground Panel Size :		100, 100
+Form Size			:	112, 138
+
+ASI|KR|KS009
+
+각 컴포넌트는 3씩 쉬프트된다.
+
+
+크림, 치즈, 페페로니에서는 구성항목의 유무를 결정한다.(즉 인터페이스에 해당하는 항목생성 유무 결정)
+시카고, 뉴욕 선택 사항에선 같은 인터페이스를 사용하는 구성요소중 어떠한 것을 사용할지 결정한다.
+
+야채:양상추, 오이, 양파
+치즈:레기아노, 모짜렐라
+생선:송어, 꽁치
+크림:프레존, 플러쉬
+소스:토마토, 갈릭, 돈까스
+
+피자의 종류를 선택할때 각 항목의 포함 유무를 결정한다.
+크림:야채+크림+생선
+치즈:치즈+야채+소스
+생선:생선+소스+야채
+
+지역의 종류를 선택할때 위에서 포함한 항목의 요소를 결정한다.
+항목의 요소명을 결정한다. 아래와 같이 일단은 모든 항목을 결정하고 생성한다.
+윗동네 = 야채:양파, 크림:프레존, 생선:송어, 치즈:레기아노, 소스:갈릭
+내동네 = 양채:오이, 크림:플러쉬, 생선:꽁치, 치즈:모짜렐라, 소스:돈까스
+
+ 
+
+ 가.UV경화로 통과
+ 나.IR 하면검사 : 카메라로 IR 면 이물, Scratch, 락타이트 상태, 기울기등 재검사.
+ 다.제품 반전 : 
+  1.Carrier 에 안착된 제품 Pickup(2ea)>>
+  2.Picker1 180도 회전하면서 트레이 후면 인동.
+  3.Picker2 가 제품 인수
+  4.화상 얼라인(Align) 후 Carrier 에 안착
+
+
+ IR 하면 검사 
+ 1.Carrier(1*10)가 IR 하면 검사 공정으로 이동
+ 2.카메라 이용하여 하면 검사진행
+ 3.불량 제품 Pickup
+ 4.불량품 적재 Tray로 이동하여 제품 안착
+
+ 제품 반전
+ 1.Carrier 에 안착된 제품을 Pickup(4ea->2ea)
+ 2.Picker1 180도 회전 하면서 Tray 후면으로 이동
+ 3.Picker2 가 제품 인수
+ 4.화상 얼라인(Align)후 Tray에 안착.
+ 5.케리어에 안착된 제품을 Pickup(4->2ea).
+ 6.Picker1 180도 회전 하면서 Tray 후면으로 이동
+ 7.Picker2 가 제품 인수
+ 8.화상 얼라인(Align)후 Tray에 안착
+
+ 1286, 1030
+
+
+
+ ATX사용하기 위해서는 실행파일과 함께 EzBasicAxl.dll과 AXL.dll을 함께 놓아야한다.
+
+ NEXSTAR Lens IR Filter Rear Assembly : NFLIFAR
+
+
+
+
+C++ DLL 임포트 방법
+1.EziMOTIONPlusR.dll 파일을 실행 파일 폴더에 카피한다.
+2.네임스페이스 안에서 인터럽트 서비스를 유징한다.
+3.클래스 안에서 [DllImpot("디엘엘파일명.dll")] 다음 함수를 스테틱드로 이스턴한다.
+아래의 예제는 다음과 같다.
+namespace WindowsFormsApplication11
+{
+    using System.Runtime.InteropServices;
+
+    public partial class Form1 : Form
+    {
+        [DllImport("EziMOTIONPlusR.dll")]
+            public static extern bool FAS_Connect(byte nCom, int upModuleID);
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+    }
+}
+
+4.함수의 인자형은 AXM.cs 파일을 참조하라(코드파일, 라이브러리비교)
+예제는 다음과 같다.
+using System.Runtime.InteropServices;
+
+public class CAXM
+{   
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInfoGetAxis(int nAxisNo, ref int npBoardNo, ref int npModulePos, ref uint upModuleID);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInfoIsMotionModule(ref uint upStatus);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInfoIsInvalidAxisNo(int nAxisNo);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInfoGetAxisStatus(int nAxisNo);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInfoGetAxisCount(ref int npAxisCount);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInfoGetFirstAxisNo(int nBoardNo, int nModulePos, ref int npAxisNo);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmVirtualSetAxisNoMap(int nRealAxisNo, int nVirtualAxisNo);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmVirtualGetAxisNoMap(int nRealAxisNo, ref int npVirtualAxisNo);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmVirtualSetMultiAxisNoMap(int nSize, int[] npRealAxesNo, int[] npVirtualAxesNo);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmVirtualGetMultiAxisNoMap(int nSize, ref int npRealAxesNo, ref int npVirtualAxesNo);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmVirtualResetAxisMap();
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInterruptSetAxis(int nAxisNo, uint hWnd, uint uMessage, CAXHS.AXT_INTERRUPT_PROC pProc, ref uint pEvent);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInterruptSetAxisEnable(int nAxisNo, uint uUse);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInterruptGetAxisEnable(int nAxisNo, ref uint upUse);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInterruptRead(ref int npAxisNo, ref uint upFlag);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInterruptReadAxisFlag(int nAxisNo, int nBank, ref uint upFlag);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInterruptSetUserEnable(int nAxisNo, int lBank, uint uInterruptNum);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmInterruptGetUserEnable(int nAxisNo, int lBank, ref uint upInterruptNum);
+
+	[DllImport("AXL.dll")]
+    public static extern uint AxmMotLoadParaAll(string szFilePath);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmMotSaveParaAll(string szFilePath);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmMotSetParaLoad(int nAxisNo, double InitPos, double InitVel, double InitAccel, double InitDecel);
+
+    [DllImport("AXL.dll")]
+    public static extern uint AxmMotGetParaLoad(int nAxisNo, ref double InitPos, ref double InitVel, ref double InitAccel, ref double InitDecel);
+
+
+
+
+
+	//             //델리게이트를 진행할 함수를 지정해 준다.
+// 		public delegate void MyEventOne(string disString);
+// 		//MyEventOne : 델리게이트 명.
+// 		//PortInData : 이벤트 전송시 전달할 데이터.
+// 
+// 		//이벤트를 진행할 함수를 지정해 준다.
+// 		public event MyEventOne DisplayDataSanding;
+// 		//MyEventOne : 델리게이트 명.
+// 		//CompleteInput : Base Class의 멤버함수명. 실질적인 Behavior이 진행되는 함수.
+//             equipment.DisplayDataSanding += new SignalManeger101.Equipment.MyEventOne(equipment_DisplayDataSanding);
+//             equipment.DisplayDataRecieve += new SignalManeger101.Equipment.MyEventTow(equipment_DisplayDataRecieve);
+//             DisplayDataSanding("EXPORT:FORMAT PNG");

@@ -1,0 +1,41 @@
+1.VS 2013 Ultimate
+Microsoft Visual Studio Ultimate 2013
+버전 12.0.30110.00 Update 1
+Microsoft .NET Framework
+버전 4.5.50938
+설치된 버전: Ultimate
+
+
+2.Visual Assist X : 
+License: wkb0204@shinjinmtec.co.kr (1-user license) Support ends 2014.12.13
+VA_X.dll file version 10.8.2029.0  built 2014.02.24
+DevEnv.exe version 12.0.30110.0 Ultimate
+msenv.dll version 12.0.30110.0
+Comctl32.dll version 6.10.7601.17514
+Windows 7 6.1 Build 7601 Service Pack 1
+
+
+3.Infragistics Ultimate
+아이디 : Infragistics4.Shared.v13.2
+런타임 버전 : v4.0.30319
+버전 : 13.2.20132.2023
+
+
+4.ReSharper
+JetBrains ReSharper 8.2 Full Edition
+Build 8.2.0.2160 on 2014-03-20T10:53:08
+
+
+5.Open CV Sharp.UserInterface
+아이디 : OpenCvSharp.UserInterface
+런타임버전 : v2.0.50727
+버전 : 1.0.0.0
+
+6.Matrox Imaging Library
+아이디 : Matrox.MatroxImagingLibrary
+런타임 버전 : v4.0.30319
+버전 : 10.0.2564.1
+
+
+7.EzSoftware RM History
+    -- Ver(1.3.6.3123) : Lib(3.1.2.3), Release date : 2014.02.

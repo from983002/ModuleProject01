@@ -1,0 +1,6 @@
+Pwin32 ±¸µ¿
+View > Terminal
+p370,5
+p380,5
+View > Watch Window
+enaplcc 10

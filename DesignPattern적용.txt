@@ -1,0 +1,37 @@
+Abstruct Factory Design Pattern : 
+ 2.01 버전에서는 최초로 시도되는 버전이다. 이는 1.40 버전을 패턴화를 시작한 것을 의미한다.
+ CInspection_Lamition 파일에서 정의 하여 사용하는 클래스 함수, 클래스 멤버를 추상 팩토리에 
+ 적용하여 이를 분리하고 재조정을 진행한다. 
+
+ 1.40에서 발생하는 버그로 인하여 2.01 버전을 폐기하고 이를 패치한 후에
+ 2.02 버전에서 다시 패턴화를 진행하도록 한다. 
+
+Compile Config :
+ 이전 까지는 Debug 환경에서 진행을 했는데 
+ 2.0버전 부터는 Release 에서 진행함. Sequence의 Perfermence를 위해서 Release를 진행해야한다. 
+ 특히 MemoryStream(메모리엑세스) 부분에서는 반드시 Release를 사용해야함.(2배 이상의 Perfermence 차이가 남.)
+
+GC 회피 알고리즘
+ 가.Reference Type의 Instancing을 Class Function 내에서 하지말고 대안으로 다음과 같은 방식으로 처리한다.
+  1.Class Member이면서 Value Type인 Struct로 변경하며 Function 내에서 Instancing을 진행한다. 
+    Struct 는 Value Type이기 때문에 Heap에 영역이 생성되지 않기 때문에 GC가 간섭하지 않는다.
+  2.1의 방법을 사용할수  없다면 Class Member 타입으로 설정해라.
+    public class MyVector{}
+    static class MainClass   {     private static MyVector myVector = new MyVector();  myVector.X = 10; }
+ 나.String Type에서 "+" 기호를 사용하지 마라. 
+  : 이는 "+" 이 진행될 때마다 새로운 객체를 생성하기 때문에 GC가 활동하도록 하고 있다. 따라서 다음의 방법을
+  : 사용하여 String 의 "+"를 대체하여 사용한다.
+  string output = "[" + index.ToString() + "]" + name; //최소 4개의 객체가 생성된다.
+  
+  StringBuilder sb = new StringBuilder();
+  sb.Clear();
+  sb.Append("["); 
+  sb.Append(index.ToString); 
+  sb.Append("]"); 
+  sb.Append(name);	//객체가 1개만 생성된다.
+
+  sb.AppendFormat("[{0}] {1}", index.ToString, name.ToString); //위와 같은 결과이다.
+
+ 다.의도하지 않은 참조를 찾아서 삭제해라.
+  : 메모리 사용량이 계속 증가한다면 의도하지 않는 참조가 어디에서 인가 진행되고 있다는 것이다.
+  : 즉 GC가 참조되어 있는 객체는 건들지 않기 때문에 메모리는 계속 증가하는 것이다.

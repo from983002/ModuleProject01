@@ -1,0 +1,22 @@
+ SetReg(LamiSystem.RegPathRcpCon, "상단 항목", uGrd_Recipe_UperData.Rows.Count.ToString("0"));
+                SetReg(LamiSystem.RegPathRcpCon, "하단 항목", uGrd_Recipe_DownData.Rows.Count.ToString("0"));
+
+//private bool Uper_Measure_Result = false;
+        //private bool Down_Measure_Result = false;
+
+        private bool Uper_Measure_Result = true;
+        private bool Down_Measure_Result = true;
+
+TrigWatch_Uper.Reset();
+                TrigWatch_Down.Reset();
+
+StrListSysConTitle
+
+public int Umac_Connect()
+        {
+            if (umacSystem.DeviceNo >= 0 && umacSystem.DeviceNo < 10)
+            {
+                umacSystem.DeviceOpen = PMAC.OpenPmacDevice ( umacSystem.DeviceNo );
+            }
+            return umacSystem.DeviceOpen;
+        }
