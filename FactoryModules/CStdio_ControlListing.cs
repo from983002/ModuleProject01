@@ -12,9 +12,7 @@ namespace FactoryModules
 
         // 모든 텍스트 상자의 이름 가져오기!!
         public List<string> getControlNames(Control control)
-        {
-            ControlData.Clear();
-
+        {           
             // 대상 control 의 하위에 있는 모든 컨트롤을 대상으로 스캔한다.
             foreach (Control tmpCtrl in control.Controls)
             {
@@ -46,6 +44,11 @@ namespace FactoryModules
             }
 
             return ControlData;
+        }
+
+        public void SetNameInitial()
+        {
+            ControlData.Clear();
         }
     }
 }
