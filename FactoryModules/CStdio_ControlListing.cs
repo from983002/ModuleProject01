@@ -6,7 +6,7 @@ namespace FactoryModules
 {
     public class CStdio_ControlListing
     {
-        public string GetSet_ContainerName { get; set; }
+        //public string GetSet_ContainerName { get; set; }
 
         public List<string> ControlData = new List<string>();
 
