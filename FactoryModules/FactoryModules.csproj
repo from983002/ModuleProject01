@@ -50,7 +50,6 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="CStdio_ControlListing.cs" />
-    <Compile Include="CStdio_File_CheckDelete.cs" />
     <Compile Include="CStdio_INIFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
