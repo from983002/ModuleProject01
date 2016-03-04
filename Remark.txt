@@ -1,3 +1,17 @@
+널 조건 연산자
+// rows가 NULL이면 cnt 도 NULL
+// rows가 NULL이 아니면 cnt는 실제 rows 갯수
+int? cnt = rows?.Count;
+
+// customers 컬렉션이 NULL이면 c는 NULL
+// 아니면, c는 첫번째 배열요소
+Customer c = customers?[0]; 
+
+// customers가 널인지 체크하고
+// 다시 customers[0]가 널인지 체크
+int? age = customers?[0]?.Age;
+////////////////////////////////////////////////////////////////////
+
 구조체를 사용할 때는 다음의 사항을 주의하는 점이 좋습니다.
 저만 그런지는 몰라도 가끔씩 헷갈릴 때가 있습니다.
 
