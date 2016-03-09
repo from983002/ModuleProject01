@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemLamination", "SystemAlign\SystemLamination.csproj", "{ED490B91-5BBA-4444-9D24-B8F5499262D3}"
 EndProject
@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryModules", "FactoryModules\FactoryModules.csproj", "{1C0FB321-0121-4110-8043-BC0B39875A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pattern_Modules", "Pattern_Signton\Pattern_Modules.csproj", "{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,22 @@ Global
 		{1C0FB321-0121-4110-8043-BC0B39875A61}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1C0FB321-0121-4110-8043-BC0B39875A61}.Release|Win32.ActiveCfg = Release|Any CPU
 		{1C0FB321-0121-4110-8043-BC0B39875A61}.Release|x64.ActiveCfg = Release|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Debug|Win32.Build.0 = Debug|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Debug|x64.Build.0 = Debug|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Release|Win32.ActiveCfg = Release|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Release|Win32.Build.0 = Release|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Release|x64.ActiveCfg = Release|Any CPU
+		{A1C28BEE-FD47-4767-9A0E-19E1BBFB520E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
