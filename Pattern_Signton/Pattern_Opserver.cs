@@ -14,7 +14,6 @@ namespace Pattern_Signton
             CallBackTest cbt = new CallBackTest();
             cbt.onComplete(Image_File_Delete_Test);
         }
-
    
 
     public class CallBackTest
