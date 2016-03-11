@@ -34,15 +34,31 @@ namespace FactoryModules
         /// <returns>
         /// INI파일에서 읽은 결과값을 리턴한다.
         /// </returns>
-        public string GetIniValue(string section, string key, string filePath)
+        public string GetIniValue(string filePath, string section, string key)
         {
-
             StringBuilder temp = new StringBuilder(255);
 
             GetPrivateProfileString(section, key, "", temp, 255, filePath);
 
             return temp.ToString();
+        }
 
+        public string GetIniValue(string section, string key)
+        {
+            StringBuilder temp = new StringBuilder(255);
+
+            GetPrivateProfileString(section, key, "", temp, 255, GetSet_FilePath);
+
+            return temp.ToString();
+        }
+
+        public string GetIniValue(string key)
+        {
+            StringBuilder temp = new StringBuilder(255);
+
+            GetPrivateProfileString(GetSet_Section, key, "", temp, 255, GetSet_FilePath);
+
+            return temp.ToString();
         }
 
         /// <summary>
