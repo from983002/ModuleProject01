@@ -17,7 +17,8 @@ namespace FactoryModules
 
         private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
 
-
+        public string GetSet_FilePath { get; set; }
+        public string GetSet_Section { get; set; }
         /// <summary>
         /// INI파일에서 섹션의 키 값을 읽어서 리턴한다.
         /// </summary>
@@ -59,12 +60,23 @@ namespace FactoryModules
         /// <returns>
         /// INI파일에서 읽은 결과값을 리턴한다.
         /// </returns>
-        public void SetIniValue(string section, string key, string value, string filePath)
+        public void SetIniValue(string filePath, string section, string key, string value)
         {
             //현재의 실행파일명에서 exe를 ini로 변경하여 파일명으로 사용한다.
             //string sIniPath = System.Reflection.Assembly.GetExecutingAssembly().Location.ToLower().Replace(".exe", ".ini");
             //WritePrivateProfileString(this.Name, textBox1.Name, textBox1.Text, sIniPath);
             WritePrivateProfileString(section, key, value, filePath);
+        }
+
+
+        public void SetIniValue(string section, string key, string value)
+        {
+            WritePrivateProfileString(section, key, value, GetSet_FilePath);
+        }
+
+        public void SetIniValue(string key, string value)
+        {
+            WritePrivateProfileString(GetSet_Section, key, value, GetSet_FilePath);
         }
     }
 }
