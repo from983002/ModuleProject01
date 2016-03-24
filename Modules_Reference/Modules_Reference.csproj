@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CStdio_Constants.cs" />
     <Compile Include="CStdio_ControlListing.cs" />
     <Compile Include="CStdio_File_CheckDelete.cs" />
     <Compile Include="CStdio_INIFiles.cs" />
