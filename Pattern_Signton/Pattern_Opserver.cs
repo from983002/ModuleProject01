@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pattern_Signton
+namespace Pattern_Modules
 {
     /*
     public Form1()
