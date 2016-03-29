@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory.cs" />
     <Compile Include="Pattern_Opserver.cs" />
     <Compile Include="Pattern_Signton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
