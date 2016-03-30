@@ -7,8 +7,14 @@ using System.Drawing;
 
 namespace Modules_Device
 {
-    interface IGrabber
+    public interface IGrabber
     {
         Image GetSet_GrabImg { get; set; }
+    }
+
+    public class Grabber_Euresys : IGrabber
+    {
+        public Image GetSet_GrabImg { get; set; }
+
     }
 }
