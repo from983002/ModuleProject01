@@ -9,6 +9,6 @@ namespace Modules_Device
 {
     interface IGrabber
     {
-        Image
+        public Image GetSet_GrabImg { get; set; }
     }
 }
